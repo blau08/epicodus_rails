@@ -1,4 +1,4 @@
 class Chapter < ActiveRecord::Base
   has_many :lessons
-  validates :title, :presence => true
+  validates :name, :presence => true
 end
