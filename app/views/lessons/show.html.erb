@@ -8,8 +8,17 @@
 <p><%= @lesson.content %></p>
 
 <%= content_for(:navleft) do %>
-  <li><a href="#">Previous lesson</a></li>
-  <li><a href="#">Next lesson</a></li>
+  <li>
+    <% if @lesson.previous %>
+      <a href="/chapters/<%= @chapter.id %>/lessons/<%= @lesson.previous.id%>">Previous Lesson</a><br>
+    <% end %>
+  </li>
+
+  <li>
+    <% if @lesson.next %>
+      <a href="/chapters/<%= @chapter.id %>/lessons/<%= @lesson.next.id%>">Next Lesson</a><br>
+    <% end %>
+  </li>
 <% end %>
 
 
