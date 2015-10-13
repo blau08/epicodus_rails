@@ -4,7 +4,7 @@ class ChaptersController < ApplicationController
   end
 
   def show
-    @chapters = Chapter.find(params[:id])
+    @chapter = Chapter.find(params[:id])
   end
 
   #----------------- CREATE ----------------- #
@@ -24,7 +24,27 @@ class ChaptersController < ApplicationController
 
   #----------------- UPDATE ----------------- #
 
+  def edit
+    @chapter = Chapter.find(params[:id])
+  end
+
+  def update
+    @chapter = Chapter.find(params[:id])
+    if @chapter.update(chapter_params)
+      redirect_to chapters_path
+    else
+      render :edit
+    end
+  end
+
   #----------------- DESTROY ----------------- #
+
+  def destroy
+    @chapter = Chapter.find(params[:id])
+    @chapter.destroy
+    redirect_to chapters_path
+  end
+
 
 private
 def chapter_params

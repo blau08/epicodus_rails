@@ -1,0 +1,12 @@
+<h1><%= @chapter.name %></h1>
+
+<button class="btn btn-danger"><%= link_to "Add Lesson", new_chapter_lesson_path(@chapter) %></button>
+
+<br>
+<br>
+
+<ul>
+  <% @chapter.lessons.each do |lesson| %>
+    <li><%= link_to lesson.title, chapter_lesson_path(@chapter, lesson) %></li>
+  <% end %>
+</ul>

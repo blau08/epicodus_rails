@@ -1,0 +1,18 @@
+<h1><%= @lesson.title %></h1>
+<button class="btn btn-danger"><%= link_to 'Edit', edit_chapter_lesson_path(@chapter, @lesson) %></button>
+<button class="btn btn-danger"><%= link_to "Delete", chapter_lesson_path(@chapter, @lesson), :data => {:confirm => "Are you sure?", :method => "delete"}  %></button>
+
+<br>
+<br>
+
+<p><%= @lesson.content %></p>
+
+<%= content_for(:navleft) do %>
+  <li><a href="#">Previous lesson</a></li>
+  <li><a href="#">Next lesson</a></li>
+<% end %>
+
+
+<%= content_for(:navbar) do %>
+  <li><a href="/chapters">Section Contents</a></li>
+<% end %>

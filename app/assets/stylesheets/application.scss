@@ -3,4 +3,50 @@
 
 body {
   font-family: 'Josefin Sans', sans-serif;
+  background-color: #eeeeee;
+}
+
+.chapter-box {
+  padding: 18px;
+  margin: 10px;
+  background-color: white;
+}
+
+.chapter-box span {
+  font-size: 12px;
+}
+
+
+.chapter-box h3 {
+  display: inline;
+}
+
+.chapter-box h3 a {
+  color: black !important;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a {
+  color: #e02200;
+}
+
+a:hover {
+  color: #e02200;
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 30px;
+}
+
+.navbar {
+  font-weight: bold;
 }
